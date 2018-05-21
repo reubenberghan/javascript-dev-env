@@ -2,7 +2,6 @@
   "name": "javascript-dev-env",
   "version": "0.1.0",
   "description": "JavaScript development starter kit",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,5 +21,13 @@
   "bugs": {
     "url": "https://github.com/reubenberghan/javascript-dev-env/issues"
   },
-  "homepage": "https://github.com/reubenberghan/javascript-dev-env#readme"
+  "homepage": "https://github.com/reubenberghan/javascript-dev-env#readme",
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.3",
+    "babel-loader": "7.1.4",
+    "babel-preset-env": "1.7.0",
+    "webpack": "4.8.3",
+    "webpack-cli": "2.1.3"
+  }
 }
