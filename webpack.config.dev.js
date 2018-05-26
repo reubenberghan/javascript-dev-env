@@ -1,4 +1,5 @@
 import path from 'path';
+import htmlWebpackPlugin from 'html-webpack-plugin';
 
 export default {
   entry: path.resolve(__dirname, 'src/index.js'),
@@ -7,13 +8,15 @@ export default {
     publicPath: '/',
     path: path.resolve(__dirname, 'dist')
   },
+  plugins: [
+    new htmlWebpackPlugin()
+  ],
   module: {
     rules: [
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
-      { test: /\.css$/, use: [ { loader: 'style-loader' }, { loader: 'css-loader' }] }
+      { test: /\.js$/, exclude: /node_modules/, use: 'babel-loader' },
+      { test: /\.css$/, use: [ 'style-loader', 'css-loader' ] }
     ]
   },
-  mode: 'development'
-  // ,
-  // devTool: 'inline-source-map'
+  mode: 'development',
+  devtool: 'inline-source-map'
 }
