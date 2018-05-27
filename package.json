@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "description": "JavaScript development starter kit",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "run-p security-check open:src",
     "security-check": "nsp check",
     "open:src": "babel-node build-scripts/srcServer.js",
-    "build": "webpack"
+    "lint": "esw webpack.config.* src build-scripts --color",
+    "lint:watch": "npm run lint -- --watch"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,9 @@
     "babel-loader": "7.1.4",
     "babel-preset-env": "1.7.0",
     "css-loader": "0.28.11",
+    "eslint": "4.19.1",
+    "eslint-plugin-import": "2.12.0",
+    "eslint-watch": "3.1.5",
     "express": "4.16.3",
     "html-webpack-plugin": "3.2.0",
     "npm-run-all": "4.1.3",
