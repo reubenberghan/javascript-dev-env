@@ -1,6 +1,6 @@
 import './index.css';
 
-function helloWorld() { console.log('hello world!') };
+function helloWorld() { console.log('hello world!') } // eslint-disable-line no-console
 
 helloWorld();
 
