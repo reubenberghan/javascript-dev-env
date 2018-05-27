@@ -9,7 +9,10 @@ export default {
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
-    new htmlWebpackPlugin()
+    new htmlWebpackPlugin({
+      template: 'src/index.html',
+      title: 'JS Dev Env'
+    })
   ],
   module: {
     rules: [
