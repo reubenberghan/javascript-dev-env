@@ -10,8 +10,7 @@ export default {
   },
   plugins: [
     new htmlWebpackPlugin({
-      template: 'src/index.html',
-      title: 'JS Dev Env'
+      template: 'src/index.html'
     })
   ],
   module: {
