@@ -1,11 +1,10 @@
+import greeting from './greeting';
+
 import './index.css';
 
-function helloWorld() { console.log('hello world!') } // eslint-disable-line no-console
-
-helloWorld();
-
 const h1 = document.createElement('h1');
+const name = 'Reuben';
 
-h1.innerHTML = 'Hello World';
+h1.innerHTML = greeting(name);
 
 document.body.appendChild(h1);
