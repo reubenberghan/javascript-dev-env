@@ -1,5 +1,12 @@
+import { expect } from 'chai';
+
 import greeting from './greeting';
 
-test('greeting with Reuben', () => {
-  expect(greeting('Reuben')).toBe('Hello Reuben');
+describe('greeting', () => {
+  it('should say "Hello World" when given "World"', () => {
+    const desired = 'Hello World';
+    const actual = greeting('World');
+    
+    expect(actual).to.equal(desired);
+  });
 });
