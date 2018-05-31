@@ -2,6 +2,9 @@
   "name": "javascript-dev-env",
   "version": "0.1.0",
   "description": "JavaScript development starter kit",
+  "engines": {
+    "node": "10.1.0"
+  },
   "scripts": {
     "prestart": "babel-node build-scripts/startMessage.js",
     "start": "run-p --silent security-check open:src lint:watch test:watch",
