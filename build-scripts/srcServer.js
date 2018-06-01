@@ -15,4 +15,12 @@ app.use(require('webpack-dev-middleware')(compiler, { logLevel: 'warn', publicPa
 
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, '../src/index.html')));
 
+app.get('/recipes', (req, res) => {
+  res.json([
+    { "id": 1, "title": "Fish Tacos", "ingredients": [ "Fish", "Tacos" ], "steps": [ "Cook fish", "Put in tacos" ] },
+    { "id": 2, "title": "Ham Sandwhich", "ingredients": [ "Ham", "Bread", "Mustard" ], "steps": [ "Spread mustard on bread", "Add ham" ] },
+    { "id": 3, "title": "Banana Smoothie", "ingredients": [ "Banana", "Almond Milk" ], "steps": [ "Blend banana and almond milk", "Serve" ] }
+  ]);
+});
+
 app.listen(PORT, err => err ? console.log(err) : open(`http://localhost:${PORT}`));
