@@ -13,7 +13,7 @@ getRecipes()
     const div = document.createElement('div');
 
     let divBody = data.reduce((recipeHtml, recipe) => {
-      return recipeHtml += `<div id="${ recipe.id }">
+      return recipeHtml += `<div data-id="${ recipe.id }">
         <h2>${ recipe.title }</h2>
         <h3><u>Ingredients</u></h3>
         <ul>
