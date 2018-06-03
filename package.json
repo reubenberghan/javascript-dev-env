@@ -7,13 +7,16 @@
   },
   "scripts": {
     "prestart": "babel-node build-scripts/startMessage.js",
-    "start": "run-p --silent security-check open:src lint:watch test:watch",
+    "start": "run-p --silent security-check open:src lint:watch test:watch start-mock-api",
     "security-check": "nsp check",
     "open:src": "babel-node build-scripts/srcServer.js",
     "lint": "esw webpack.config.* src build-scripts --color",
     "lint:watch": "npm run lint -- --watch",
     "test": "mocha --reporter progress build-scripts/testSetup.js \"src/**/*.test.js\"",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "generate-mock-data": "babel-node build-scripts/generateMockData.js",
+    "prestart-mock-api": "npm run generate-mock-data",
+    "start-mock-api": "json-server --watch src/api/db.json --port 3001"
   },
   "repository": {
     "type": "git",
