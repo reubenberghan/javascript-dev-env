@@ -3,3 +3,4 @@ dist/
 coverage/
 playground/
 .vscode/
+src/api/db.json
