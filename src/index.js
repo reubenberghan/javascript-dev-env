@@ -4,7 +4,7 @@ import { getRecipes } from './api/recipeApi';
 import './index.css';
 
 const name = 'Reuben';
-const el = GreetingComponent(name);
+const el = GreetingComponent(document)(name);
 
 document.body.appendChild(el);
 
