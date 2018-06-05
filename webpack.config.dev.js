@@ -1,5 +1,5 @@
 import path from 'path';
-import htmlWebpackPlugin from 'html-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default {
   entry: path.resolve(__dirname, 'src/index.js'),
@@ -9,7 +9,7 @@ export default {
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
-    new htmlWebpackPlugin({
+    new HtmlWebpackPlugin({
       template: 'src/index.html'
     })
   ],
