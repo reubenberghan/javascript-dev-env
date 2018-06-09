@@ -19,7 +19,8 @@
     "start-mock-api": "json-server --watch src/api/db.json --port 3001",
     "localtunnel": "lt --port 3000",
     "prebuild": "run-s test lint",
-    "build": "webpack --config webpack.prod.babel.js"
+    "build": "webpack --config webpack.prod.babel.js",
+    "deploy": "surge ./dist"
   },
   "repository": {
     "type": "git",
@@ -63,6 +64,7 @@
     "nsp": "3.2.1",
     "optimize-css-assets-webpack-plugin": "4.0.2",
     "style-loader": "0.21.0",
+    "surge": "0.20.1",
     "webpack": "^4.12.0",
     "webpack-cli": "2.1.3",
     "webpack-dev-server": "3.1.4",
