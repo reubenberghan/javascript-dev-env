@@ -15,9 +15,10 @@ It provides the necessary packages, files and scripts to:
 ## TODO
 ### General
 - [ ] elaborate on the features available with the version of Babel using
-- [ ] add support for Sass compiling
 - [ ] add links to the referenced packages
 
 ### Project
-- [ ] add distServer.js and postbuild script to serve the built application locally for final sanity
-- [ ] add deploy script using Surge to deploy the static front-end
+- [x] add distServer.js and postbuild script to serve the built application locally for final sanity
+- [x] add deploy script using Surge to deploy the static front-end
+- [ ] add support for Sass compiling
+- [ ] add support for React and jsx
