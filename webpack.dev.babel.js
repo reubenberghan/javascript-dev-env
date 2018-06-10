@@ -9,16 +9,11 @@ export default merge(common, {
   devtool: 'inline-source-map',
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
+    compress: true,
     hot: true,
     noInfo: true,
-    before: app => {
-      app.get('/recipes', (req, res) => {
-        res.json([
-          { "id": 1, "title": "Fish Tacos", "ingredients": [ "Fish", "Tacos" ], "steps": [ "Cook fish", "Put in tacos" ] },
-          { "id": 2, "title": "Ham Sandwhich", "ingredients": [ "Ham", "Bread", "Mustard" ], "steps": [ "Spread mustard on bread", "Add ham" ] },
-          { "id": 3, "title": "Banana Smoothie", "ingredients": [ "Banana", "Almond Milk" ], "steps": [ "Blend banana and almond milk", "Serve" ] }
-        ])
-      })
+    proxy: {
+      '/recipes': 'http://localhost:3001',
     }
   },
   plugins : [
