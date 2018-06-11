@@ -25,7 +25,7 @@ export default {
         loader: 'babel-loader',
         options: {
           babelrc: false,
-          presets: [[ 'env', { modules: false } ]]
+          presets: [[ 'env', 'react', { modules: false } ]]
         }
       }
     ]
