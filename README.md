@@ -1,7 +1,7 @@
 # javascript-dev-env
 [![Build Status](https://travis-ci.org/reubenberghan/javascript-dev-env.svg?branch=master)](https://travis-ci.org/reubenberghan/javascript-js-dev-env)
 
-The aim of this repo is to provide a starter kit for the development of front-end JavaScript applications.
+The aim of this repo is to provide a starter kit for the development of front-end JavaScript applications. This starter kit uses the React library for the front-end application.
 
 It provides the necessary packages, files and scripts to:
 - transpile app, test and build pipeline JavaScript using Babel 
@@ -21,4 +21,5 @@ It provides the necessary packages, files and scripts to:
 - [x] add distServer.js and postbuild script to serve the built application locally for final sanity
 - [x] add deploy script using Surge to deploy the static front-end
 - [ ] add support for Sass compiling
-- [ ] add support for React and jsx
+- [x] add support for React and jsx
+- [ ] update demo app to use React example
