@@ -1,12 +1,15 @@
-import GreetingComponent from './GreetingComponent';
+import ReactDOM from 'react-dom';
+
+import GreetingComponent from './components/GreetingComponent';
+import greeting from './greeting';
 import { getRecipes } from './api/recipeApi';
 
 import './index.css';
 
 const name = 'Reuben';
-const el = GreetingComponent(document)(name);
+const el = <GreetingComponent greeting={ greeting } name={ name } />;
 
-document.body.appendChild(el);
+ReactDOM.render(el, document.getElementById('root'));
 
 getRecipes()
   .then(data => {
